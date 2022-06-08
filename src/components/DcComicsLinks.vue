@@ -46,10 +46,17 @@ export default {
     background-color: rgb(2, 130, 249);
     display: flex;
     justify-content: space-around;
+    align-items: center;
     
-    img{
-        width: 100px;
-        height: auto;
+    img {
+        width: auto;
+        height: 70px;
+    }
+
+    a{
+        text-decoration: none;
+        color: white;
+        text-align: center;
     }
 }
 </style>

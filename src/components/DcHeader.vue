@@ -84,6 +84,11 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
+
+  img{
+    width: 70px;
+    margin: 10px;
+  }
 }
   ul {
     list-style-type: none;
