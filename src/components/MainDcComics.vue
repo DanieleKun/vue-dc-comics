@@ -15,5 +15,6 @@ export default {
   .comics-content {
     height: 100px;
     background-color: rgb(28, 28, 28);
+    color: white;
   }
 </style>
