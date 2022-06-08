@@ -1,16 +1,16 @@
 <template>
   <header>
-      <h1>Hello Woerld!</h1>
+      <img src="../assets/img/dc-logo.png" alt="Logo DC">
   </header>
 </template>
 
 <script>
 export default {
-  name: 'Header',
+  name: 'DcHeader',
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-
+  
 </style>
