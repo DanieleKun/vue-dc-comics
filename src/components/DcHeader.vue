@@ -1,17 +1,17 @@
 <template>
   <header>
-  <a href="">
-    <img src="../assets/img/dc-logo.png" alt="Logo DC">
-  </a>
-  <nav>
-    <ul>
-      <li v-for="(link, i) in links" :key="i">
-        <a :href="link.url" :class="link.current ? 'active' : ''">
-        {{link.text}}
-        </a>
-      </li>
-    </ul>
-  </nav>
+    <a href="">
+      <img src="../assets/img/dc-logo.png" alt="Logo DC">
+    </a>
+    <nav>
+      <ul>
+        <li v-for="(link, i) in links" :key="i">
+          <a :href="link.url" :class="link.current ? 'active' : ''">
+            {{ link.text }}
+          </a>
+        </li>
+      </ul>
+    </nav>
 
   </header>
 </template>
@@ -19,58 +19,58 @@
 <script>
 export default {
   name: 'DcHeader',
-  data(){
+  data() {
     return {
       links: [
         {
-          text:"Characters",
+          text: "Characters",
           url: "#",
-          current: "false"
+          current: false
         },
         {
-          text:"Comics",
+          text: "Comics",
           url: "#",
-          current: "true"
+          current: true
         },
         {
-          text:"Movies",
+          text: "Movies",
           url: "#",
-          current: "false"
+          current: false
         },
         {
-          text:"Tv",
+          text: "Tv",
           url: "#",
-          current: "false"
+          current: false
         },
         {
-          text:"Games",
+          text: "Games",
           url: "#",
-          current: "false"
+          current: false
         },
         {
-          text:"Collectibles",
+          text: "Collectibles",
           url: "#",
-          current: "false"
+          current: false
         },
         {
-          text:"Videos",
+          text: "Videos",
           url: "#",
-          current: "false"
+          current: false
         },
         {
-          text:"Fans",
+          text: "Fans",
           url: "#",
-          current: "false"
+          current: false
         },
         {
-          text:"News",
+          text: "News",
           url: "#",
-          current: "false"
+          current: false
         },
         {
-          text:"Shop",
+          text: "Shop",
           url: "#",
-          current: "false"
+          current: false
         },
       ]
     }
@@ -80,32 +80,41 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+$color_blue: rgb(2, 130, 249);
+
 header {
   display: flex;
   justify-content: space-around;
   align-items: center;
 
-  img{
+  img {
     width: 70px;
     margin: 10px;
   }
 }
-  ul {
-    list-style-type: none;
-    margin: 20px 0;
 
-    li{
-      display: inline-block;
+ul {
+  list-style-type: none;
+  margin: 20px 0;
 
-      a {
-        color: rgb(70, 70, 100);
-        text-decoration: none;
-        padding: 0 10px;
+  li {
+    display: inline-block;
 
-        &.active{
-          color: rgb(2, 130, 249);
-        }
+    a {
+      color: rgb(70, 70, 100);
+      text-decoration: none;
+      padding: 0 10px;
+
+      &.active {
+        color: $color_blue;
+        padding-bottom: 36px;
+        border-bottom: 3px solid $color_blue;
+      }
+
+      &:hover{
+        color: $color_blue;
       }
     }
   }
+}
 </style>

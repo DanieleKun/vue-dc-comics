@@ -1,6 +1,16 @@
 <template>
   <footer>
-      <h2>Footer</h2>
+      <nav>
+        <ul>
+          <li>
+            ciao
+          </li>
+        </ul>
+      </nav>
+
+      <figure>
+        <img src="../assets/img/dc-logo-bg.png" alt="">
+      </figure>
   </footer>
 </template>
 
@@ -12,5 +22,20 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+
+  footer{
+    background-image: url("../assets/img/footer-bg.jpg");
+    background-size: cover;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    
+
+    figure{
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+    }
+  }
 
 </style>
