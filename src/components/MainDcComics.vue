@@ -15,6 +15,12 @@
         />
 
       </div>
+
+      
+    </div>
+
+    <div class="button">
+      <h4>LOAD MORE</h4>
     </div>
   </section>
 </template>
@@ -151,6 +157,18 @@ $color_blue: rgb(2, 130, 249);
       width: 200px;
       margin-top: 20px;
       margin-bottom: 10px;
+      object-fit: cover;
+    }
+  }
+
+  .button{
+    display: flex;
+    justify-content: center;
+    
+    h4{
+      background-color: $color_blue;
+      padding: 10px 40px;
+      margin: 20px;
     }
   }
 }
