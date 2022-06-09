@@ -8,28 +8,19 @@
         <h3>Current Series</h3>
       </div>
 
-      <div class="card_container">
+      <div class="cards_container">
 
-        <DcCardComics v-for="(card, i) in myCard" :key="i"
+        <DcCardComics v-for="(card, i) in myCards" :key="i"
           :details="card"
         />
 
-        <!-- <div class="cards" v-for="(card, i) in myCard" :key="i">
-          <img :src="" :alt="">
-          <h4>...</h4>
-        </div> -->
-
-        <div class="cards">
-          <img src="https://www.dccomics.com/sites/default/files/styles/covers192x291/public/comic-covers/2018/09/AC1000_DLX_162-001_HD_5ba13723281ab0.37845353.jpg?itok=ZsI-C5eX" alt="">
-          <h4>Ciao bello</h4>
-        </div>
       </div>
     </div>
   </section>
 </template>
 
 <script>
-import DcCardComics from './components/DcCardComics.vue'
+import DcCardComics from './DcCardComics.vue'
 
 export default {
   name: 'MainDcComics',
@@ -142,19 +133,19 @@ $color_blue: rgb(2, 130, 249);
 
   .my_container {
     background-color: rgb(28, 28, 28);
-    height: 500px;
     width: 80%;
     margin: 0 auto;
   }
 
   .cards_container{
     display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   .cards{
-
-    width: 200px;
-    height: 200px;
+    width: 15%;
+    padding: 25px;
     
     img{
       width: 200px;
