@@ -10,6 +10,10 @@
 
       <div class="card_container">
 
+        <DcCardComics v-for="(card, i) in myCard" :key="i"
+          :details="card"
+        />
+
         <!-- <div class="cards" v-for="(card, i) in myCard" :key="i">
           <img :src="" :alt="">
           <h4>...</h4>
@@ -25,8 +29,14 @@
 </template>
 
 <script>
+import DcCardComics from './components/DcCardComics.vue'
+
 export default {
   name: 'MainDcComics',
+  components: {
+    DcCardComics
+  },
+
   data() {
     return {
       myCards:
@@ -147,6 +157,7 @@ $color_blue: rgb(2, 130, 249);
     height: 200px;
     
     img{
+      width: 200px;
       margin-top: 20px;
       margin-bottom: 10px;
     }
